@@ -132,7 +132,7 @@ class SearchPageState extends State<SearchPage> {
               });
             },
             decoration: const InputDecoration(
-              labelText: 'Search',
+              labelText: 'Search Item',
               prefixIcon: Icon(Icons.search),
               border: OutlineInputBorder(),
             ),
@@ -145,9 +145,8 @@ class SearchPageState extends State<SearchPage> {
               itemBuilder: (context, index) {
                 final item =
                     filteredData.isNotEmpty ? filteredData[index] : data[index];
-                return ListTile(
-                  title: Text(item),
-                  onTap: () {
+                return GestureDetector(
+                  onDoubleTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -155,6 +154,9 @@ class SearchPageState extends State<SearchPage> {
                       ),
                     );
                   },
+                  child: ListTile(
+                    title: Text(item),
+                  ),
                 );
               },
             ),

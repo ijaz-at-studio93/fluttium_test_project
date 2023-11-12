@@ -1,7 +1,8 @@
 description: My Search flow.
 ---
-- pressOn: Search
 - pressOn: "Search"
+- pressOn: "Search Item"
+
 - writeText: "Apple"
 - expectVisible: "Apple"
 - clearText: 
@@ -86,14 +87,15 @@ description: My Search flow.
 - expectVisible: "Banana"
 - clearText: 
     characters: 6
-- pressOn: "Apple"
+
+- doubleTap: "Apple"
 - expectVisible: "Description for Apple:"
 - pressOn: "Back"
-- pressOn: "Banana"
+- doubleTap: "Banana"
 - expectVisible: "Description for Banana:"
 - pressOn: "Back"
 
-- pressOn: "Search"
+- pressOn: "Search Item"
 - writeText: "Banana"
 - expectVisible: "Banana"
 - clearText: 
