@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Simple Bottom Nav App',
+      title: 'Fluttium Test',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -42,16 +42,19 @@ class MyHomePageState extends State<MyHomePage> {
         title: const Text('Simple Bottom Nav App'),
       ),
       body: _pages[_currentIndex],
-      bottomNavigationBar: Container(
-        height: 56, // You can adjust the height according to your design
-        color: Colors.blue,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _buildNavItem('Home', 0, Icons.home),
-            _buildNavItem('Search', 1, Icons.search),
-            _buildNavItem('Profile', 2, Icons.person),
-          ],
+      bottomNavigationBar: Material(
+        elevation: 2,
+        child: Container(
+          height: 56, // You can adjust the height according to your design
+          color: Colors.blueGrey[200],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _buildNavItem('Home', 0, Icons.home),
+              _buildNavItem('Search', 1, Icons.search),
+              _buildNavItem('Profile', 2, Icons.person),
+            ],
+          ),
         ),
       ),
     );
