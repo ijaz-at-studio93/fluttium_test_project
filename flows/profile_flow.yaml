@@ -1,0 +1,18 @@
+descripition: Profile User flow.
+---
+- doubleTap: "Profile"
+- pressOn: "Name"
+- clearText:
+    characters: 10   
+- writeText: "Muhammad Ijaz"
+- wait:
+    seconds: 1
+
+- pressOn: "Email"
+- clearText:
+    characters: 20   
+- writeText: "fluttium@studio93.io"
+- wait:
+    seconds: 5  
+
+- pressOn: "Save"
