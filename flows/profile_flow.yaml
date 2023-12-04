@@ -1,0 +1,25 @@
+description: Profile User flow.
+---
+- pressOn: "Profile"
+- pressOn: "Name"
+- takeScreenshot:
+    path: 'profile/name.png'
+    pixelRatio: 1.0
+
+- clearText:
+    characters: 15    
+- writeText: "Muhammad Ijaz"
+- wait:
+    seconds: 1
+
+- pressOn: "Email"
+- writeText: "fluttium@studio93.io"
+- takeScreenshot:
+    path: 'profile/email.png'
+    pixelRatio: 1.0
+
+- doubleTap: "Save"
+
+- takeScreenshot:
+    path: 'profile/save.png'
+    pixelRatio: 1.0

@@ -1,0 +1,7 @@
+description: My HOME flow.
+---
+- scroll: 
+    in: "list_view"
+    until: "Banner 29"
+    speed: 10.0 
+- expectVisible: "Banner 29"

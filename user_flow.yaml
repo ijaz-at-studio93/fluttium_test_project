@@ -1,0 +1,97 @@
+description: A complete app  user flow.
+---
+# Home
+- scroll: 
+    in: "list_view"
+    until: "Banner 29"
+    speed: 10.0 
+- expectVisible: "Banner 29"
+
+# SEARCH
+
+- pressOn: "Search"
+- pressOn: "Search Item"
+
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+- writeText: "Banana"
+- expectVisible: "Banana"
+- clearText: 
+    characters: 6
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+
+
+- pressOn: "Apple"
+- expectVisible: "Description for Apple:"
+- pressOn: "Back"
+- pressOn: "Banana"
+- expectVisible: "Description for Banana:"
+- pressOn: "Back"
+
+- pressOn: "Search Item"
+- writeText: "Banana"
+- expectVisible: "Banana"
+- clearText: 
+    characters: 6
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+- writeText: "Banana"
+- expectVisible: "Banana"
+- clearText: 
+    characters: 6
+- writeText: "Banana"
+- expectVisible: "Banana"
+- clearText: 
+    characters: 6
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+- writeText: "Apple"
+- expectVisible: "Apple"
+- clearText: 
+    characters: 5
+- writeText: "Banana"
+- expectVisible: "Banana"
+- clearText: 
+    characters: 6
+
+# # PROFILE
+- pressOn: "Profile"
+- pressOn: "Name"
+- takeScreenshot:
+    path: 'profile/name.png'
+    pixelRatio: 1.0
+
+- clearText:
+    characters: 15    
+- writeText: "Muhammad Ijaz"
+- wait:
+    seconds: 1
+
+- pressOn: "Email"
+- writeText: "fluttium@studio93.io"
+- takeScreenshot:
+    path: 'profile/email.png'
+    pixelRatio: 1.0
+
+- doubleTap: "Save"
+
+- takeScreenshot:
+    path: 'profile/save.png'
+    pixelRatio: 1.0
